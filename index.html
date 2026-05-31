@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Sahaay Scholarship Program — Empowering students across India through direct, institution-funded education support.">
 <title>Sahaay Scholarship Program · 2026–27</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts Link for Nunito (including all light, regular, bold, and black italic weights) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -13,8 +14,9 @@
   --navy-light: #D6E4F0; --navy-pale: #EDF4FB;
   --gold: #B8860B; --gold-light: #F5D078; --gold-pale: #FDF8E8;
   --ink: #1A1A2E; --gray: #555; --gray-light: #E8EDF2; --white: #fff;
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Inter', sans-serif;
+  /* Both custom variables mapped to Nunito for unified branding */
+  --serif: 'Nunito', sans-serif;
+  --sans: 'Nunito', sans-serif;
 }
 html { scroll-behavior: smooth; }
 body { font-family: var(--sans); background: var(--white); color: var(--ink); overflow-x: hidden; }
@@ -28,15 +30,18 @@ nav {
   justify-content: space-between; padding: 0 6vw; height: 68px;
   box-shadow: 0 2px 20px rgba(0,0,0,0.18);
 }
-.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-icon {
-  width: 40px; height: 40px; background: var(--gold);
-  display: flex; align-items: center; justify-content: center;
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo-img {
+  height: 52px;
+  background: var(--white);
+  padding: 4px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease;
+  object-fit: contain;
 }
-.logo-name { font-family: var(--serif); font-size: 22px; font-weight: 900; color: var(--white); line-height: 1.1; }
-.logo-name small {
-  display: block; font-family: var(--sans); font-size: 9px; font-weight: 500;
-  letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 2px;
+.logo-img:hover {
+  transform: scale(1.03);
 }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a {
@@ -45,16 +50,11 @@ nav {
   text-decoration: none; transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--white); }
-.nav-apply {
-  background: var(--gold) !important; color: var(--navy-dark) !important;
-  padding: 8px 20px !important; border-radius: 2px;
-}
-.nav-apply:hover { background: var(--gold-light) !important; color: var(--navy-dark) !important; }
 
 /* HERO */
 .hero {
   min-height: 100vh; background: var(--navy-dark);
-  display: flex; flex-direction: column; align-items: flex-start;
+  display: flex; align-items: center;
   justify-content: center; padding: 130px 6vw 80px;
   position: relative; overflow: hidden;
 }
@@ -67,37 +67,68 @@ nav {
   background-image: radial-gradient(circle, rgba(255,255,255,0.035) 1px, transparent 1px);
   background-size: 32px 32px;
 }
-.hero-diya {
-  position: absolute; right: 8vw; top: 50%; transform: translateY(-50%);
-  opacity: 0.12; pointer-events: none;
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 6vw;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeUp 0.8s 0.3s both;
+}
+.hero-img-file {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(245, 208, 120, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.08);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.hero-img-file:hover {
+  transform: translateY(-4px) scale(1.01);
 }
 .hero-tag {
   font-size: 10px; font-weight: 600; letter-spacing: 0.3em;
   text-transform: uppercase; color: var(--gold-light); opacity: 0.9;
   margin-bottom: 24px; display: flex; align-items: center; gap: 12px;
-  position: relative; z-index: 2; animation: fadeUp 0.5s 0.1s both;
+  animation: fadeUp 0.5s 0.1s both;
 }
 .hero-tag::before { content: ''; width: 32px; height: 2px; background: var(--gold); }
 .hero h1 {
-  font-family: var(--serif); font-size: clamp(52px, 8vw, 116px);
-  font-weight: 900; color: var(--white); line-height: 0.95;
+  font-family: var(--serif); font-size: clamp(38px, 5.5vw, 76px);
+  font-weight: 900; color: var(--white); line-height: 1.05;
   letter-spacing: -0.02em; margin-bottom: 32px; max-width: 820px;
-  position: relative; z-index: 2; animation: fadeUp 0.6s 0.2s both;
+  animation: fadeUp 0.6s 0.2s both;
 }
 .hero h1 .gold { color: var(--gold-light); }
 .hero h1 .italic { font-style: italic; }
 .hero-sub {
   font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.68);
   line-height: 1.85; max-width: 530px;
-  position: relative; z-index: 2; margin-bottom: 44px;
+  margin-bottom: 44px;
   animation: fadeUp 0.5s 0.35s both;
 }
-.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; position: relative; z-index: 2; animation: fadeUp 0.5s 0.5s both; }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.5s 0.5s both; }
 .btn-primary {
   background: var(--gold); color: var(--navy-dark);
   padding: 16px 36px; font-size: 12px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase;
   text-decoration: none; display: inline-block; transition: all 0.2s; cursor: pointer; border: none;
+  font-family: var(--sans);
 }
 .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
 .btn-outline {
@@ -108,10 +139,11 @@ nav {
 }
 .btn-outline:hover { border-color: var(--white); }
 .hero-scroll {
-  position: absolute; bottom: 40px; left: 6vw;
+  position: absolute; bottom: 30px; left: 6vw;
   font-size: 10px; font-weight: 600; letter-spacing: 0.25em;
   text-transform: uppercase; color: rgba(255,255,255,0.3);
   display: flex; align-items: center; gap: 10px;
+  z-index: 3;
 }
 .hero-scroll::after { content: '↓'; font-size: 14px; }
 
@@ -237,49 +269,159 @@ section { padding: 96px 6vw; }
 .elig-note h4 { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--gold-light); margin-bottom: 16px; }
 .elig-note p { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.8; }
 
-/* PROCESS FLOW */
+/* PROGRAMME AT A GLANCE (PROCESS FLOW) */
 .process { background: var(--navy-dark); padding: 96px 6vw; }
 .process .sec-tag { color: var(--gold-light); }
 .process .sec-tag::after { background: var(--gold-light); }
 .process .sec-title { color: var(--white); }
-.flow-track {
-  display: flex; align-items: stretch; margin-top: 60px;
-  gap: 0; flex-wrap: wrap; position: relative;
+.process .sec-body { color: rgba(255,255,255,0.7); max-width: 720px; margin-bottom: 48px; }
+
+.glance-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 840px;
+  margin: 0 auto;
 }
-.flow-step {
-  flex: 1; min-width: 140px; position: relative;
-  display: flex; flex-direction: column; align-items: center;
+.glance-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
-.flow-step::after {
-  content: '→'; position: absolute; right: -14px; top: 28px;
-  color: var(--gold); font-size: 22px; z-index: 2; line-height: 1;
+.glance-box {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-left: 4px solid var(--gold);
+  padding: 20px 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s, transform 0.2s;
+  border-radius: 4px;
 }
-.flow-step:last-child::after { display: none; }
-.flow-box {
-  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-  border-top: 3px solid var(--gold); padding: 24px 16px;
-  text-align: center; width: 100%; flex: 1;
-  transition: background 0.2s;
+.glance-box:hover {
+  background: rgba(255,255,255,0.09);
+  transform: translateY(-2px);
 }
-.flow-box:hover { background: rgba(255,255,255,0.11); }
-.flow-num {
-  font-family: var(--serif); font-size: 11px; font-weight: 700;
-  letter-spacing: 0.2em; color: var(--gold); margin-bottom: 8px;
+.glance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-.flow-title { font-family: var(--serif); font-size: 16px; font-weight: 900; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
-.flow-date { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
-.flow-desc { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.6; }
-.flow-outcomes {
-  display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap;
+.glance-label {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  text-transform: uppercase;
 }
-.flow-outcome {
-  flex: 1; min-width: 160px; padding: 20px 18px;
-  font-size: 13px; color: var(--white); font-weight: 500; line-height: 1.5;
+.glance-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
 }
-.flow-outcome.renew { background: rgba(26,100,60,0.4); border-top: 2px solid #4CAF80; }
-.flow-outcome.alumni { background: rgba(26,60,94,0.6); border-top: 2px solid var(--gold); }
-.flow-outcome.exit { background: rgba(60,60,60,0.4); border-top: 2px solid rgba(255,255,255,0.2); }
-.flow-outcome strong { display: block; font-family: var(--serif); font-size: 16px; margin-bottom: 4px; }
+.glance-date {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+  background: rgba(245, 208, 120, 0.1);
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.glance-arrow {
+  color: var(--gold);
+  font-size: 24px;
+  margin: 8px 0;
+  line-height: 1;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Outcomes and Branching design */
+.outcomes-branch {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-top: 16px;
+}
+.outcome-card {
+  padding: 24px 20px;
+  border-top: 4px solid;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+.outcome-card:hover {
+  transform: translateY(-2px);
+}
+.outcome-card.renew {
+  background: rgba(46, 153, 85, 0.08);
+  border-color: #2E9955;
+}
+.outcome-card.alumni {
+  background: rgba(184, 134, 11, 0.08);
+  border-color: var(--gold);
+}
+.outcome-card.exit {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.outcome-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.outcome-card.renew .outcome-title { color: #4CAF80; }
+.outcome-card.alumni .outcome-title { color: var(--gold-light); }
+.outcome-card.exit .outcome-title { color: rgba(255, 255, 255, 0.8); }
+
+.outcome-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+/* Legend guidelines block */
+.glance-legend {
+  margin-top: 40px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.legend-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+.legend-bullet {
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.legend-bullet.renew { color: #2E9955; }
+.legend-bullet.alumni { color: var(--gold); }
+.legend-bullet.exit { color: rgba(255, 255, 255, 0.5); }
 
 /* HOW WE SELECT */
 .select-section { background: var(--white); }
@@ -430,7 +572,7 @@ section { padding: 96px 6vw; }
 .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 40px; }
 .contact-details { display: flex; flex-direction: column; gap: 24px; }
 .cdetail { display: flex; gap: 16px; align-items: flex-start; }
-.cdetail-icon { width: 40px; height: 40px; flex-shrink: 0; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.cdetail-icon { width: 40px; height: 40px; flex-shrink: 0; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--gold-light); }
 .cdetail-info strong { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-bottom: 3px; }
 .cdetail-info a, .cdetail-info span { font-size: 15px; color: var(--white); text-decoration: none; }
 .cdetail-info a:hover { color: var(--gold-light); }
@@ -459,19 +601,19 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  .hero-container { grid-template-columns: 1fr; text-align: center; gap: 48px; }
+  .hero-content { align-items: center; }
+  .hero-img-file { max-width: 420px; }
   .about-grid, .elig-grid, .disburse-grid, .closeout-grid, .contact-inner, .apply-grid { grid-template-columns: 1fr; gap: 40px; }
   .fund-grid, .select-grid, .values-grid { grid-template-columns: 1fr; }
   .vision-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; gap: 28px; }
   .nav-links { display: none; }
-  .stat { padding: 30px 24px; }
-  .flow-track { flex-direction: column; gap: 20px; }
-  .flow-step::after { display: none; }
-  .tl-track { flex-direction: column; gap: 24px; }
-  .tl-track::before { display: none; }
-  .tl-step { align-items: flex-start; text-align: left; flex-direction: row; gap: 16px; }
-  .tl-dot { flex-shrink: 0; margin-bottom: 0; margin-top: 3px; }
-  .hero-diya { display: none; }
+  .stat { padding: 30px 24px; border-right: none; border-bottom: 1px solid var(--navy-light); }
+  .stat:last-child { border-bottom: none; }
+  .outcomes-branch { grid-template-columns: 1fr; }
+  .glance-box { flex-direction: column; text-align: center; gap: 12px; }
+  .glance-date { width: auto; align-self: center; }
 }
 </style>
 </head>
@@ -480,25 +622,14 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
 <!-- NAV -->
 <nav>
   <a class="logo" href="#home">
-    <div class="logo-icon">
-      <!-- Inline diya flame SVG icon -->
-      <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2 C9,5 7,9 8,13 C9,16 10.5,17 12,17 C13.5,17 15,16 16,13 C17,9 15,5 12,2Z" fill="#0F2540"/>
-        <path d="M12 6 C10.5,8.5 10,11 10.5,13 C11,15 11.5,15.5 12,15.5 C12.5,15.5 13,15 13.5,13 C14,11 13.5,8.5 12,6Z" fill="#F5D078"/>
-        <rect x="11" y="17" width="2" height="4" rx="1" fill="#0F2540"/>
-        <ellipse cx="12" cy="21" rx="7" ry="2.5" fill="#0F2540"/>
-        <path d="M5,21 Q5,26 12,27 Q19,26 19,21" fill="#B8860B"/>
-      </svg>
-    </div>
-    <div class="logo-name">Sahaay <small>Scholarship Program</small></div>
+    <img class="logo-img" src="SubLogo1 NB.png" alt="Sahaay Logo">
   </a>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#fund">What We Fund</a>
     <a href="#process">How It Works</a>
-    <a href="#apply">Apply</a>
+    <a href="#apply">Apply Now</a>
     <a href="#contact">Contact</a>
-    <a href="#apply" class="nav-apply">Apply Now</a>
   </div>
 </nav>
 
@@ -506,27 +637,28 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-dots"></div>
-  <!-- Background diya SVG -->
-  <div class="hero-diya">
-    <svg width="420" height="520" viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M210 40 C170,80 148,140 158,200 C168,250 188,275 210,280 C232,275 252,250 262,200 C272,140 250,80 210,40Z" fill="white"/>
-      <path d="M210 90 C192,118 184,148 188,178 C192,202 200,215 210,218 C220,215 228,202 232,178 C236,148 228,118 210,90Z" fill="white" opacity="0.7"/>
-      <rect x="204" y="280" width="12" height="48" rx="6" fill="white"/>
-      <ellipse cx="210" cy="330" rx="60" ry="22" fill="white"/>
-      <path d="M150,330 Q150,400 210,415 Q270,400 270,330" fill="white" opacity="0.6"/>
-    </svg>
+  
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-tag">Sahaay Scholarship Program · Academic Year 2026–27</div>
+      <h1>
+        <span>Pass the</span><br>
+        <span class="italic gold">light</span>
+        <span> forward.</span>
+      </h1>
+      <p class="hero-sub">Sahaay — meaning <em>help and support</em> in Sanskrit — funds deserving students across India directly through their institutions. Because a child's future should never be decided by their family's income.</p>
+      <div class="hero-cta">
+        <a href="#apply" class="btn-primary">Apply for 2026–27</a>
+        <a href="#about" class="btn-outline">Learn About Sahaay</a>
+      </div>
+    </div>
+    
+    <div class="hero-graphic">
+      <!-- Verbatim asset placement for Sahaay.jpg with robust layout wrapper -->
+      <img class="hero-img-file" src="Sahaay.jpg" onerror="this.onerror=null; this.src='Sahaay.png';" alt="Sahaay Scholarship Initiative Graphic">
+    </div>
   </div>
-  <div class="hero-tag">Sahaay Scholarship Program · Academic Year 2026–27</div>
-  <h1>
-    <span>Pass the</span><br>
-    <span class="italic gold">light</span>
-    <span> forward.</span>
-  </h1>
-  <p class="hero-sub">Sahaay — meaning <em>help and support</em> in Sanskrit — funds deserving students across India directly through their institutions. Because a child's future should never be decided by their family's income.</p>
-  <div class="hero-cta">
-    <a href="#apply" class="btn-primary">Apply for 2026–27</a>
-    <a href="#about" class="btn-outline">Learn About Sahaay</a>
-  </div>
+  
   <div class="hero-scroll">Scroll to explore</div>
 </section>
 
@@ -545,11 +677,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
 <!-- STATS -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat">
-      <div class="stat-num"><sup>₹</sup>2L–5L</div>
-      <div class="stat-label">2026–27 Funding</div>
-      <div class="stat-sub">Personal contribution, growing annually</div>
-    </div>
     <div class="stat">
       <div class="stat-num">8</div>
       <div class="stat-label">Students Targeted</div>
@@ -673,4 +800,548 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
       </div>
       <div class="elig-note">
         <h4>Particularly Encouraged</h4>
-        <p>Applications from <strong style="color:var(--gold-light)">girls in underserved areas</strong>, <strong style="color:var(--gold-light)">first-gener
+        <p>Applications from <strong style="color:var(--gold-light)">girls in underserved areas</strong>, <strong style="color:var(--gold-light)">first-generation learners</strong>, and those facing unique family circumstances are highly valued and strongly encouraged.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME PROCESS FLOW SECTION -->
+<section class="process" id="process">
+  <div class="inner">
+    <div class="sec-tag">How It Works</div>
+    <h2 class="sec-title" style="color: var(--white); margin-bottom: 8px;">Programme at a Glance</h2>
+    <p class="sec-body">The diagram below outlines the end-to-end journey — from the first application to the year-end closeout and renewal decision.</p>
+    
+    <div class="glance-container">
+      <!-- Step 1: Application -->
+      <div class="glance-step">
+        <div class="glance-box">
+          <div class="glance-info">
+            <div class="glance-label">Application</div>
+            <div class="glance-desc">Applications received</div>
+          </div>
+          <div class="glance-date">June 2026</div>
+        </div>
+        <div class="glance-arrow">↓</div>
+      </div>
+
+      <!-- Step 2: Review -->
+      <div class="glance-step">
+        <div class="glance-box">
+          <div class="glance-info">
+            <div class="glance-label">Review</div>
+            <div class="glance-desc">Screening · story review · shortlisting</div>
+          </div>
+          <div class="glance-date">July 2026</div>
+        </div>
+        <div class="glance-arrow">↓</div>
+      </div>
+
+      <!-- Step 3: Selection -->
+      <div class="glance-step">
+        <div class="glance-box">
+          <div class="glance-info">
+            <div class="glance-label">Selection</div>
+            <div class="glance-desc">Follow-up conversation · final decision</div>
+          </div>
+          <div class="glance-date">August 2026</div>
+        </div>
+        <div class="glance-arrow">↓</div>
+      </div>
+
+      <!-- Step 4: Disbursement -->
+      <div class="glance-step">
+        <div class="glance-box">
+          <div class="glance-info">
+            <div class="glance-label">Disbursement</div>
+            <div class="glance-desc">Institution verification · fee payment</div>
+          </div>
+          <div class="glance-date">September 2026</div>
+        </div>
+        <div class="glance-arrow">↓</div>
+      </div>
+
+      <!-- Step 5: Academic Year -->
+      <div class="glance-step">
+        <div class="glance-box">
+          <div class="glance-info">
+            <div class="glance-label">Academic Year</div>
+            <div class="glance-desc">Mid-year check-in</div>
+          </div>
+          <div class="glance-date">October 2026 – May 2027</div>
+        </div>
+        <div class="glance-arrow">↓</div>
+      </div>
+
+      <!-- Step 6: Closeout -->
+      <div class="glance-step" style="margin-bottom: 12px;">
+        <div class="glance-box">
+          <div class="glance-info">
+            <div class="glance-label">Closeout</div>
+            <div class="glance-desc">Check-in · result confirmation · renewal review</div>
+          </div>
+          <div class="glance-date">May – June 2027</div>
+        </div>
+        <div class="glance-arrow" style="margin: 16px 0 4px 0;">↓</div>
+      </div>
+      
+      <!-- Outlining the branching outcomes visually -->
+      <div class="outcomes-branch">
+        <!-- Outcome RENEW -->
+        <div class="outcome-card renew">
+          <div class="outcome-title">Renew</div>
+          <div class="outcome-desc">Continues next year</div>
+        </div>
+
+        <!-- Outcome ALUMNI -->
+        <div class="outcome-card alumni">
+          <div class="outcome-title">Alumni</div>
+          <div class="outcome-desc">Completed programme</div>
+        </div>
+
+        <!-- Outcome EXIT -->
+        <div class="outcome-card exit">
+          <div class="outcome-title">Exit</div>
+          <div class="outcome-desc">Graceful closure</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color-coded legend mapping perfectly to description -->
+    <div class="glance-legend">
+      <div class="legend-item">
+        <span class="legend-bullet renew">■</span>
+        <span><strong>Renew</strong> — continues to next year's disbursement</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-bullet alumni">■</span>
+        <span><strong>Alumni</strong> — joins Sahaay network</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-bullet exit">■</span>
+        <span><strong>Exit</strong> — graceful closure, slot reopens</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE SELECT -->
+<section class="select-section" id="selection">
+  <div class="inner">
+    <div class="sec-tag">Selection Criteria</div>
+    <h2 class="sec-title">How We Select Candidates</h2>
+    <div class="select-grid">
+      <div class="select-item">
+        <div class="select-num">01</div>
+        <div>
+          <h4>Financial Assessment</h4>
+          <p>We review official documentation, home background, and source of family income thoroughly to prioritize the most economically disadvantaged.</p>
+        </div>
+      </div>
+      <div class="select-item">
+        <div class="select-num">02</div>
+        <div>
+          <h4>Academic Potential</h4>
+          <p>Marks are not everything, but intent is. We gauge aptitude, curiosity, and willingness to learn through recommendation letters and application essays.</p>
+        </div>
+      </div>
+      <div class="select-item">
+        <div class="select-num">03</div>
+        <div>
+          <h4>Personal Motivation</h4>
+          <p>Your drive and stories of resilience tell us who you are. We look for passionate individuals eager to give back to their communities.</p>
+        </div>
+      </div>
+      <div class="select-item">
+        <div class="select-num">04</div>
+        <div>
+          <h4>Verification &amp; Integrity</h4>
+          <p>Direct communication with teachers and background checks ensure selected candidates meet the high ethical standards of the foundation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISBURSEMENT -->
+<section class="disburse" id="disbursement">
+  <div class="inner">
+    <div class="sec-tag">Direct Support</div>
+    <h2 class="sec-title">Funding Disbursement</h2>
+    <div class="disburse-grid">
+      <div class="disburse-steps">
+        <div class="dstep">
+          <div class="dstep-icon">🏛️</div>
+          <div>
+            <h4>To the Institution Directly</h4>
+            <p>Sahaay strictly operates on an institutional-transfer basis. Cash is never handed over to the student or family members directly.</p>
+          </div>
+        </div>
+        <div class="dstep">
+          <div class="dstep-icon">📜</div>
+          <div>
+            <h4>Verification Documents</h4>
+            <p>Selected students must provide official invoice/fee statements from the registrar or accounting department of their school or college.</p>
+          </div>
+        </div>
+        <div class="dstep">
+          <div class="dstep-icon">✅</div>
+          <div>
+            <h4>No Intermediaries</h4>
+            <p>Every single transaction is audited. No agents, third parties, or brokers are utilized to process payments.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="funding-box">
+        <h3>Estimated Funding Range</h3>
+        <div class="funding-row">
+          <span class="flabel">Primary Schooling</span>
+          <span class="fval">₹15,000 – ₹40,000</span>
+        </div>
+        <div class="funding-row">
+          <span class="flabel">Secondary Schooling</span>
+          <span class="fval">₹25,000 – ₹60,000</span>
+        </div>
+        <div class="funding-row">
+          <span class="flabel">College Tuition (General)</span>
+          <span class="fval">₹50,000 – ₹1,20,000</span>
+        </div>
+        <div class="funding-row">
+          <span class="flabel">Vocational &amp; Certifications</span>
+          <span class="fval">₹20,000 – ₹50,000</span>
+        </div>
+        <div class="funding-row">
+          <span class="flabel">Competitive Exam Coaching</span>
+          <span class="fval">₹40,000 – ₹1,50,000</span>
+        </div>
+        <p class="funding-note">*Values are indicative and can be customized depending on exceptional need or merit guidelines verified during interviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section" id="timeline">
+  <div class="inner">
+    <div class="sec-tag">Calendar</div>
+    <h2 class="sec-title">Important Dates</h2>
+    <div class="tl-track">
+      <div class="tl-step">
+        <div class="tl-dot gold"></div>
+        <div class="tl-month">May 15</div>
+        <div class="tl-event">Applications Open</div>
+        <div class="tl-detail">Portal goes live; registration form opens for submissions.</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot"></div>
+        <div class="tl-month">June 30</div>
+        <div class="tl-event">Final Deadline</div>
+        <div class="tl-detail">Applications close strictly at 11:59 PM.</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot"></div>
+        <div class="tl-month">July 15</div>
+        <div class="tl-event">Shortlist Reveal</div>
+        <div class="tl-detail">Emails sent to shortlisted students for verification.</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot gold"></div>
+        <div class="tl-month">Aug 05</div>
+        <div class="tl-event">Awards Finalized</div>
+        <div class="tl-detail">Official selection letters issued to the 8 candidates.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSEOUT -->
+<section class="closeout" id="closeout">
+  <div class="inner">
+    <div class="sec-tag">Long-Term Journey</div>
+    <h2 class="sec-title">Annual Program Cycle</h2>
+    <div class="closeout-grid">
+      <div>
+        <p class="closeout-intro">We do not just hand over a check and disappear. Sahaay is a continuous pathway. Our engagement remains steady throughout the academic cycle to ensure student wellbeing, growth, and high results.</p>
+        <div class="closeout-steps">
+          <div class="co-step">
+            <span class="co-step-num">01</span>
+            <div>
+              <h4>Quarterly Reviews</h4>
+              <p>Brief virtual syncs to check up on performance, attendance, and overall physical and mental health status.</p>
+            </div>
+          </div>
+          <div class="co-step">
+            <span class="co-step-num">02</span>
+            <div>
+              <h4>Mentor Assigned</h4>
+              <p>Each awardee gets aligned with an experienced mentor from corporate or academic sectors for weekly advice.</p>
+            </div>
+          </div>
+          <div class="co-step">
+            <span class="co-step-num">03</span>
+            <div>
+              <h4>Inter-category Meetups</h4>
+              <p>Sharing platforms to collaborate, talk, build connections, and learn from other candidates' struggles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="closeout-outcomes">
+        <div class="co-outcome renew">
+          <h4>Renewal Standard</h4>
+          <p>Incentives to continue support depend on showing genuine interest, securing regular attendance, passing semester/grade assessments, and abiding by community conduct guidelines.</p>
+        </div>
+        <div class="co-outcome alumni">
+          <h4>Graduation &amp; Beyond</h4>
+          <p>Selected alumni transition smoothly into independent careers, becoming our future mentors, passing their light to the next batches of Sahaay applicants.</p>
+        </div>
+        <div class="co-outcome exit">
+          <h4>Orderly Transitions</h4>
+          <p>Should the student secure another national scholarship, we gracefully shift resources to the next runner-up candidate on our list.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="vision" id="vision">
+  <div class="inner">
+    <div class="sec-tag">Our Philosophy</div>
+    <h2 class="sec-title">The Foundation's Vision</h2>
+    <div class="vision-grid">
+      <div class="vision-card">
+        <h3>Direct Empowerment</h3>
+        <p>No bureaucratic layers. No overhead loss. We utilize a streamlined personal fund where 100% of the proceeds hit the classroom directly.</p>
+      </div>
+      <div class="vision-card">
+        <h3>Equality of Dream</h3>
+        <p>A child's social ranking or geographical origin should never narrow down their professional horizon. Every individual deserves a fair chance.</p>
+      </div>
+      <div class="vision-card">
+        <h3>Paying It Forward</h3>
+        <p>Success has real value only when it helps to hoist others. We foster a lifelong circle of gratitude, support, and pay-it-forward leadership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values" id="values">
+  <div class="inner">
+    <div class="sec-tag">Our Culture</div>
+    <h2 class="sec-title">Core Principles</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <h4>Integrity First</h4>
+        <p>We ensure utmost clarity, strict validation checks, and straightforward processes in all award determinations.</p>
+      </div>
+      <div class="value-card">
+        <h4>Radical Kindness</h4>
+        <p>We treat every candidate's background and private narrative with profound dignity, deep empathy, and full support.</p>
+      </div>
+      <div class="value-card">
+        <h4>Deep Focus</h4>
+        <p>Instead of spreading resources thin, we invest deeply in fewer candidates (8) to ensure we make a permanent impact.</p>
+      </div>
+      <div class="value-card">
+        <h4>Lasting Trust</h4>
+        <p>We work in unison with parents, institutions, and educators to construct a protective network for the candidate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply-section" id="apply">
+  <div class="inner">
+    <div class="sec-tag">Apply Now</div>
+    <h2 class="sec-title">Take the Next Step</h2>
+    
+    <div class="apply-grid">
+      <!-- Steps Column -->
+      <div>
+        <div class="apply-step">
+          <div class="apply-step-num">1</div>
+          <div>
+            <h4>Complete the Application</h4>
+            <p>Ensure all fields are truthfully updated. Incorrect or suspicious data will trigger immediate disqualification.</p>
+          </div>
+        </div>
+        <div class="apply-step">
+          <div class="apply-step-num">2</div>
+          <div>
+            <h4>Keep Supporting Documents Ready</h4>
+            <ul class="docs-list">
+              <li>Latest Academic Marksheet / Report Cards</li>
+              <li>Proof of Income (Salary Slips / Income Certificate / ITR)</li>
+              <li>Official Institution Admission / Enrollment Proof</li>
+              <li>Reference Letter from a Teacher or Local Mentor</li>
+            </ul>
+          </div>
+        </div>
+        <div class="apply-step">
+          <div class="apply-step-num">3</div>
+          <div>
+            <h4>Attend Interview</h4>
+            <p>Shortlisted applicants must participate in an online video call along with at least one parent or direct guardian.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Styled Google Form Call-to-Action Card -->
+      <div class="apply-form-box" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 480px; padding: 44px 40px; border-top: 4px solid var(--gold); background: var(--navy-pale);">
+        <div>
+          <h3 style="font-family: var(--serif); font-size: 28px; font-weight: 900; color: var(--navy-dark); margin-bottom: 8px;">Official Application</h3>
+          <p style="font-size: 14px; color: var(--gray); margin-bottom: 24px; line-height: 1.6;">Academic Year 2026–2027 Scholarship Drive</p>
+          
+          <div style="background: var(--white); border-left: 3px solid var(--gold); padding: 20px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(26,60,94,0.03);">
+            <h4 style="font-family: var(--serif); font-weight: 900; color: var(--navy-dark); margin-bottom: 8px; font-size: 16px;">External Submission</h4>
+            <p style="font-size: 13px; color: var(--gray); line-height: 1.7; margin-bottom: 12px;">We securely host our official registration process on Google Forms to gather transcripts, certificates, and reference files.</p>
+            <ul style="list-style: none; padding-left: 0;">
+              <li style="font-size: 12px; color: var(--gray); margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--gold);">✦</span> Estimated completion: 15 minutes
+              </li>
+              <li style="font-size: 12px; color: var(--gray); display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--gold);">✦</span> Supports file attachments up to 10MB
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="deadline-note" style="background: var(--white); border-left: 3px solid var(--navy); padding: 14px 16px; margin-bottom: 24px; font-size: 13px; color: var(--gray); line-height: 1.6;">
+            Application Deadline: <strong>June 30, 2026</strong>.
+          </div>
+          
+          <!-- Google Forms Target URL -->
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOwd_JJqT9SGIeLReBdiXPG7hfHni1cvhpdSEyNJxkVZ1Bw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; width: 100%; text-align: center;">
+            Open Application Form
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="inner">
+    <div class="sec-tag">Contact Us</div>
+    <h2 class="sec-title">Get in Touch</h2>
+    <div class="contact-inner">
+      <div class="contact-details">
+        <div class="cdetail">
+          <div class="cdetail-icon">✉️</div>
+          <div class="cdetail-info">
+            <strong>Email Enquiries</strong>
+            <a href="mailto:support@sahaayprogram.org">support@sahaayprogram.org</a>
+          </div>
+        </div>
+        <div class="cdetail">
+          <div class="cdetail-icon">📍</div>
+          <div class="cdetail-info">
+            <strong>Headquarters</strong>
+            <span>Bengaluru, Karnataka, India</span>
+          </div>
+        </div>
+        <div class="cdetail">
+          <div class="cdetail-icon">📅</div>
+          <div class="cdetail-info">
+            <strong>Operating Hours</strong>
+            <span>Mon – Fri, 9:00 AM – 5:00 PM IST</span>
+          </div>
+        </div>
+        <p class="contact-note">For grievance issues, donor partnerships, or institutional collaborations, please write to us directly. We will try our best to respond within 48 business hours.</p>
+      </div>
+      
+      <!-- DEVELOPMENT NOTE: 
+           This form is linked to your Google Form (https://forms.gle/pP1F1actTmu7bgGr7)
+           using the dynamic Hidden-Iframe submission pattern. 
+           Please replace standard entry names (e.g. entry.1111111111) with the exact 
+           IDs from your Google Form (found by inspecting elements in your browser).
+      -->
+      <div class="contact-form">
+        <!-- We target a hidden iframe so the page doesn't refresh/leave when submitted -->
+        <form 
+          action="https://docs.google.com/forms/d/e/1FAIpQLScm9fXU0D3bT-G2e7zMv5DfeO-eE_Qf89N1y181rL-D3e3OBA/formResponse" 
+          method="POST" 
+          target="hidden_iframe" 
+          onsubmit="handleGoogleFormSubmit();"
+        >
+          <div class="form-group">
+            <label>Your Name</label>
+            <!-- Update the 'name' parameter with your inspected Google Form Name input element key -->
+            <input type="text" name="entry.1111111111" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <!-- Update the 'name' parameter with your inspected Google Form Email input element key -->
+            <input type="email" name="entry.2222222222" placeholder="name@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <!-- Update the 'name' parameter with your inspected Google Form Message textarea element key -->
+            <textarea name="entry.3333333333" placeholder="Write your queries or requests here..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="background:var(--gold); color:var(--navy-dark); border:none; margin-top:10px;">Send Message</button>
+          
+          <div id="contactSuccess" style="display:none; margin-top:15px; padding:12px; background:rgba(255,255,255,0.1); border-left:3px solid var(--gold-light); color:#fff; font-size:13px;">
+            Message sent! We have securely recorded your message in our system. We will get back to you shortly.
+          </div>
+        </form>
+        <!-- The hidden iframe -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="fbrand">Sahaay</div>
+      <p class="fdesc">Direct, institution-focused financial support helping deserving students across India chase their aspirations.</p>
+    </div>
+    <div class="fcol">
+      <h5>Quick Links</h5>
+      <a href="#about">About Sahaay</a>
+      <a href="#fund">Support Categories</a>
+      <a href="#process">How It Works</a>
+      <a href="#apply">Apply Form</a>
+    </div>
+    <div class="fcol">
+      <h5>Legal &amp; Admin</h5>
+      <a href="#values">Our Values</a>
+      <a href="#selection">Selection Criteria</a>
+      <a href="#disbursement">Funding Info</a>
+      <a href="#contact">Contact Support</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Sahaay Scholarship Program. All rights reserved.</p>
+    <p>Empowering minds, constructing futures.</p>
+  </div>
+</footer>
+
+<script>
+  let submitted = false;
+  function handleGoogleFormSubmit() {
+    // Show success message inside client-side cleanly
+    document.getElementById('contactSuccess').style.display = 'block';
+    
+    // Optional: Reset form fields after small delay
+    setTimeout(() => {
+      const inputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+      inputs.forEach(el => el.value = '');
+    }, 1200);
+  }
+</script>
+
+</body>
+</html>
