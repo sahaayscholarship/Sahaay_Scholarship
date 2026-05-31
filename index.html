@@ -433,7 +433,7 @@ section { padding: 96px 6vw; }
 
 /* DISBURSEMENT */
 .disburse { background: var(--navy-pale); }
-.disburse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 52px; }
+.disburse-grid { display: grid; grid-template-columns: 1fr; max-width: 800px; margin: 52px auto 0; gap: 64px; align-items: start; }
 .disburse-steps { display: flex; flex-direction: column; gap: 0; }
 .dstep {
   display: flex; gap: 20px; align-items: flex-start;
@@ -674,27 +674,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
   </div>
 </div>
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div class="stat">
-      <div class="stat-num">8</div>
-      <div class="stat-label">Students Targeted</div>
-      <div class="stat-sub">2 per funding category</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Categories</div>
-      <div class="stat-sub">School · College · Vocational · Coaching</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Institution Direct</div>
-      <div class="stat-sub">Every rupee goes to the institution</div>
-    </div>
-  </div>
-</div>
-
 <!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-track">
@@ -821,7 +800,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
             <div class="glance-label">Application</div>
             <div class="glance-desc">Applications received</div>
           </div>
-          <div class="glance-date">June 2026</div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
@@ -833,7 +811,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
             <div class="glance-label">Review</div>
             <div class="glance-desc">Screening · story review · shortlisting</div>
           </div>
-          <div class="glance-date">July 2026</div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
@@ -845,7 +822,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
             <div class="glance-label">Selection</div>
             <div class="glance-desc">Follow-up conversation · final decision</div>
           </div>
-          <div class="glance-date">August 2026</div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
@@ -857,7 +833,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
             <div class="glance-label">Disbursement</div>
             <div class="glance-desc">Institution verification · fee payment</div>
           </div>
-          <div class="glance-date">September 2026</div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
@@ -869,7 +844,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
             <div class="glance-label">Academic Year</div>
             <div class="glance-desc">Mid-year check-in</div>
           </div>
-          <div class="glance-date">October 2026 – May 2027</div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
@@ -881,7 +855,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
             <div class="glance-label">Closeout</div>
             <div class="glance-desc">Check-in · result confirmation · renewal review</div>
           </div>
-          <div class="glance-date">May – June 2027</div>
         </div>
         <div class="glance-arrow" style="margin: 16px 0 4px 0;">↓</div>
       </div>
@@ -991,116 +964,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
             <h4>No Intermediaries</h4>
             <p>Every single transaction is audited. No agents, third parties, or brokers are utilized to process payments.</p>
           </div>
-        </div>
-      </div>
-      
-      <div class="funding-box">
-        <h3>Estimated Funding Range</h3>
-        <div class="funding-row">
-          <span class="flabel">Primary Schooling</span>
-          <span class="fval">₹15,000 – ₹40,000</span>
-        </div>
-        <div class="funding-row">
-          <span class="flabel">Secondary Schooling</span>
-          <span class="fval">₹25,000 – ₹60,000</span>
-        </div>
-        <div class="funding-row">
-          <span class="flabel">College Tuition (General)</span>
-          <span class="fval">₹50,000 – ₹1,20,000</span>
-        </div>
-        <div class="funding-row">
-          <span class="flabel">Vocational &amp; Certifications</span>
-          <span class="fval">₹20,000 – ₹50,000</span>
-        </div>
-        <div class="funding-row">
-          <span class="flabel">Competitive Exam Coaching</span>
-          <span class="fval">₹40,000 – ₹1,50,000</span>
-        </div>
-        <p class="funding-note">*Values are indicative and can be customized depending on exceptional need or merit guidelines verified during interviews.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section class="timeline-section" id="timeline">
-  <div class="inner">
-    <div class="sec-tag">Calendar</div>
-    <h2 class="sec-title">Important Dates</h2>
-    <div class="tl-track">
-      <div class="tl-step">
-        <div class="tl-dot gold"></div>
-        <div class="tl-month">May 15</div>
-        <div class="tl-event">Applications Open</div>
-        <div class="tl-detail">Portal goes live; registration form opens for submissions.</div>
-      </div>
-      <div class="tl-step">
-        <div class="tl-dot"></div>
-        <div class="tl-month">June 30</div>
-        <div class="tl-event">Final Deadline</div>
-        <div class="tl-detail">Applications close strictly at 11:59 PM.</div>
-      </div>
-      <div class="tl-step">
-        <div class="tl-dot"></div>
-        <div class="tl-month">July 15</div>
-        <div class="tl-event">Shortlist Reveal</div>
-        <div class="tl-detail">Emails sent to shortlisted students for verification.</div>
-      </div>
-      <div class="tl-step">
-        <div class="tl-dot gold"></div>
-        <div class="tl-month">Aug 05</div>
-        <div class="tl-event">Awards Finalized</div>
-        <div class="tl-detail">Official selection letters issued to the 8 candidates.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CLOSEOUT -->
-<section class="closeout" id="closeout">
-  <div class="inner">
-    <div class="sec-tag">Long-Term Journey</div>
-    <h2 class="sec-title">Annual Program Cycle</h2>
-    <div class="closeout-grid">
-      <div>
-        <p class="closeout-intro">We do not just hand over a check and disappear. Sahaay is a continuous pathway. Our engagement remains steady throughout the academic cycle to ensure student wellbeing, growth, and high results.</p>
-        <div class="closeout-steps">
-          <div class="co-step">
-            <span class="co-step-num">01</span>
-            <div>
-              <h4>Quarterly Reviews</h4>
-              <p>Brief virtual syncs to check up on performance, attendance, and overall physical and mental health status.</p>
-            </div>
-          </div>
-          <div class="co-step">
-            <span class="co-step-num">02</span>
-            <div>
-              <h4>Mentor Assigned</h4>
-              <p>Each awardee gets aligned with an experienced mentor from corporate or academic sectors for weekly advice.</p>
-            </div>
-          </div>
-          <div class="co-step">
-            <span class="co-step-num">03</span>
-            <div>
-              <h4>Inter-category Meetups</h4>
-              <p>Sharing platforms to collaborate, talk, build connections, and learn from other candidates' struggles.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="closeout-outcomes">
-        <div class="co-outcome renew">
-          <h4>Renewal Standard</h4>
-          <p>Incentives to continue support depend on showing genuine interest, securing regular attendance, passing semester/grade assessments, and abiding by community conduct guidelines.</p>
-        </div>
-        <div class="co-outcome alumni">
-          <h4>Graduation &amp; Beyond</h4>
-          <p>Selected alumni transition smoothly into independent careers, becoming our future mentors, passing their light to the next batches of Sahaay applicants.</p>
-        </div>
-        <div class="co-outcome exit">
-          <h4>Orderly Transitions</h4>
-          <p>Should the student secure another national scholarship, we gracefully shift resources to the next runner-up candidate on our list.</p>
         </div>
       </div>
     </div>
@@ -1243,10 +1106,10 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
           </div>
         </div>
         <div class="cdetail">
-          <div class="cdetail-icon">📍</div>
+          <div class="cdetail-icon">📱</div>
           <div class="cdetail-info">
-            <strong>Headquarters</strong>
-            <span>Bengaluru, Karnataka, India</span>
+            <strong>Mobile Number</strong>
+            <a href="tel:+919354632255">+91 93546 32255</a>
           </div>
         </div>
         <div class="cdetail">
