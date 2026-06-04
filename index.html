@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Sahaay Scholarship Program — Empowering students across India through direct, institution-funded education support.">
 <title>Sahaay Scholarship Program · 2026–27</title>
-<!-- Google Fonts Link for Nunito (including all light, regular, bold, and black italic weights) -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,7 +13,6 @@
   --navy-light: #D6E4F0; --navy-pale: #EDF4FB;
   --gold: #B8860B; --gold-light: #F5D078; --gold-pale: #FDF8E8;
   --ink: #1A1A2E; --gray: #555; --gray-light: #E8EDF2; --white: #fff;
-  /* Both custom variables mapped to Nunito for unified branding */
   --serif: 'Nunito', sans-serif;
   --sans: 'Nunito', sans-serif;
 }
@@ -32,17 +30,11 @@ nav {
 }
 .logo { display: flex; align-items: center; text-decoration: none; }
 .logo-img {
-  height: 52px;
-  background: var(--white);
-  padding: 4px 12px;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-  transition: transform 0.2s ease;
-  object-fit: contain;
+  height: 52px; background: var(--white); padding: 4px 12px;
+  border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease; object-fit: contain;
 }
-.logo-img:hover {
-  transform: scale(1.03);
-}
+.logo-img:hover { transform: scale(1.03); }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
@@ -68,39 +60,17 @@ nav {
   background-size: 32px 32px;
 }
 .hero-container {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 6vw;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  position: relative;
-  z-index: 2;
+  display: grid; grid-template-columns: 1.1fr 0.9fr;
+  gap: 6vw; align-items: center; width: 100%; max-width: 1200px; position: relative; z-index: 2;
 }
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.hero-graphic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeUp 0.8s 0.3s both;
-}
+.hero-content { display: flex; flex-direction: column; align-items: flex-start; }
+.hero-graphic { display: flex; justify-content: center; align-items: center; animation: fadeUp 0.8s 0.3s both; }
 .hero-img-file {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(245, 208, 120, 0.1);
-  border: 4px solid rgba(255, 255, 255, 0.08);
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  width: 100%; max-width: 520px; height: auto; border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45), 0 0 30px rgba(245,208,120,0.1);
+  border: 4px solid rgba(255,255,255,0.08); object-fit: cover; transition: transform 0.3s ease;
 }
-.hero-img-file:hover {
-  transform: translateY(-4px) scale(1.01);
-}
+.hero-img-file:hover { transform: translateY(-4px) scale(1.01); }
 .hero-tag {
   font-size: 10px; font-weight: 600; letter-spacing: 0.3em;
   text-transform: uppercase; color: var(--gold-light); opacity: 0.9;
@@ -109,7 +79,7 @@ nav {
 }
 .hero-tag::before { content: ''; width: 32px; height: 2px; background: var(--gold); }
 .hero h1 {
-  font-family: var(--serif); font-size: clamp(38px, 5.5vw, 76px);
+  font-family: var(--serif); font-size: clamp(38px,5.5vw,76px);
   font-weight: 900; color: var(--white); line-height: 1.05;
   letter-spacing: -0.02em; margin-bottom: 32px; max-width: 820px;
   animation: fadeUp 0.6s 0.2s both;
@@ -118,8 +88,7 @@ nav {
 .hero h1 .italic { font-style: italic; }
 .hero-sub {
   font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.68);
-  line-height: 1.85; max-width: 530px;
-  margin-bottom: 44px;
+  line-height: 1.85; max-width: 530px; margin-bottom: 44px;
   animation: fadeUp 0.5s 0.35s both;
 }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.5s 0.5s both; }
@@ -142,8 +111,7 @@ nav {
   position: absolute; bottom: 30px; left: 6vw;
   font-size: 10px; font-weight: 600; letter-spacing: 0.25em;
   text-transform: uppercase; color: rgba(255,255,255,0.3);
-  display: flex; align-items: center; gap: 10px;
-  z-index: 3;
+  display: flex; align-items: center; gap: 10px; z-index: 3;
 }
 .hero-scroll::after { content: '↓'; font-size: 14px; }
 
@@ -245,10 +213,7 @@ section { padding: 96px 6vw; }
 .fund-icon { margin-bottom: 18px; }
 .fund-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 900; color: var(--navy-dark); margin-bottom: 10px; }
 .fund-card p { font-size: 14px; color: var(--gray); line-height: 1.8; }
-.fund-tag {
-  margin-top: 14px; font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--gold); opacity: 0.8;
-}
+.fund-tag { margin-top: 14px; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); opacity: 0.8; }
 
 /* WHO CAN APPLY */
 .eligibility { background: var(--white); }
@@ -263,165 +228,47 @@ section { padding: 96px 6vw; }
   content: ''; width: 6px; height: 6px; background: var(--gold);
   border-radius: 50%; flex-shrink: 0; margin-top: 8px;
 }
-.elig-note {
-  background: var(--navy); padding: 40px 36px; border-top: 4px solid var(--gold);
-}
+.elig-note { background: var(--navy); padding: 40px 36px; border-top: 4px solid var(--gold); }
 .elig-note h4 { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--gold-light); margin-bottom: 16px; }
 .elig-note p { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.8; }
 
-/* PROGRAMME AT A GLANCE (PROCESS FLOW) */
+/* PROGRAMME AT A GLANCE */
 .process { background: var(--navy-dark); padding: 96px 6vw; }
 .process .sec-tag { color: var(--gold-light); }
 .process .sec-tag::after { background: var(--gold-light); }
 .process .sec-title { color: var(--white); }
 .process .sec-body { color: rgba(255,255,255,0.7); max-width: 720px; margin-bottom: 48px; }
-
-.glance-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 840px;
-  margin: 0 auto;
-}
-.glance-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
+.glance-container { display: flex; flex-direction: column; gap: 16px; max-width: 840px; margin: 0 auto; }
+.glance-step { display: flex; flex-direction: column; align-items: center; position: relative; }
 .glance-box {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-left: 4px solid var(--gold);
-  padding: 20px 24px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.2s, transform 0.2s;
-  border-radius: 4px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-left: 4px solid var(--gold); padding: 20px 24px; width: 100%;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.2s, transform 0.2s; border-radius: 4px;
 }
-.glance-box:hover {
-  background: rgba(255,255,255,0.09);
-  transform: translateY(-2px);
-}
-.glance-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.glance-label {
-  font-family: var(--serif);
-  font-weight: 900;
-  font-size: 15px;
-  letter-spacing: 0.1em;
-  color: var(--white);
-  text-transform: uppercase;
-}
-.glance-desc {
-  font-size: 14px;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.5;
-}
-.glance-date {
-  font-family: var(--serif);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--gold-light);
-  letter-spacing: 0.05em;
-  background: rgba(245, 208, 120, 0.1);
-  padding: 6px 12px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-.glance-arrow {
-  color: var(--gold);
-  font-size: 24px;
-  margin: 8px 0;
-  line-height: 1;
-  opacity: 0.8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Outcomes and Branching design */
-.outcomes-branch {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  width: 100%;
-  margin-top: 16px;
-}
-.outcome-card {
-  padding: 24px 20px;
-  border-top: 4px solid;
-  border-radius: 4px;
-  transition: transform 0.2s;
-}
-.outcome-card:hover {
-  transform: translateY(-2px);
-}
-.outcome-card.renew {
-  background: rgba(46, 153, 85, 0.08);
-  border-color: #2E9955;
-}
-.outcome-card.alumni {
-  background: rgba(184, 134, 11, 0.08);
-  border-color: var(--gold);
-}
-.outcome-card.exit {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-.outcome-title {
-  font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 900;
-  margin-bottom: 8px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
+.glance-box:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); }
+.glance-info { display: flex; flex-direction: column; gap: 4px; }
+.glance-label { font-family: var(--serif); font-weight: 900; font-size: 15px; letter-spacing: 0.1em; color: var(--white); text-transform: uppercase; }
+.glance-desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+.glance-date { font-family: var(--serif); font-size: 13px; font-weight: 700; color: var(--gold-light); letter-spacing: 0.05em; background: rgba(245,208,120,0.1); padding: 6px 12px; border-radius: 4px; white-space: nowrap; }
+.glance-arrow { color: var(--gold); font-size: 24px; margin: 8px 0; line-height: 1; opacity: 0.8; display: flex; align-items: center; justify-content: center; }
+.outcomes-branch { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; width: 100%; margin-top: 16px; }
+.outcome-card { padding: 24px 20px; border-top: 4px solid; border-radius: 4px; transition: transform 0.2s; }
+.outcome-card:hover { transform: translateY(-2px); }
+.outcome-card.renew { background: rgba(46,153,85,0.08); border-color: #2E9955; }
+.outcome-card.alumni { background: rgba(184,134,11,0.08); border-color: var(--gold); }
+.outcome-card.exit { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.3); }
+.outcome-title { font-family: var(--serif); font-size: 18px; font-weight: 900; margin-bottom: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
 .outcome-card.renew .outcome-title { color: #4CAF80; }
 .outcome-card.alumni .outcome-title { color: var(--gold-light); }
-.outcome-card.exit .outcome-title { color: rgba(255, 255, 255, 0.8); }
-
-.outcome-desc {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-}
-
-/* Legend guidelines block */
-.glance-legend {
-  margin-top: 40px;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px dashed rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-  max-width: 840px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.legend-item {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
-}
-.legend-bullet {
-  font-size: 10px;
-  flex-shrink: 0;
-}
+.outcome-card.exit .outcome-title { color: rgba(255,255,255,0.8); }
+.outcome-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+.glance-legend { margin-top: 40px; padding: 24px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.15); border-radius: 6px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; max-width: 840px; margin-left: auto; margin-right: auto; }
+.legend-item { display: flex; align-items: baseline; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+.legend-bullet { font-size: 10px; flex-shrink: 0; }
 .legend-bullet.renew { color: #2E9955; }
 .legend-bullet.alumni { color: var(--gold); }
-.legend-bullet.exit { color: rgba(255, 255, 255, 0.5); }
+.legend-bullet.exit { color: rgba(255,255,255,0.5); }
 
 /* HOW WE SELECT */
 .select-section { background: var(--white); }
@@ -435,76 +282,12 @@ section { padding: 96px 6vw; }
 .disburse { background: var(--navy-pale); }
 .disburse-grid { display: grid; grid-template-columns: 1fr; max-width: 800px; margin: 52px auto 0; gap: 64px; align-items: start; }
 .disburse-steps { display: flex; flex-direction: column; gap: 0; }
-.dstep {
-  display: flex; gap: 20px; align-items: flex-start;
-  padding: 24px 0; border-bottom: 1px solid var(--navy-light);
-}
+.dstep { display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--navy-light); }
 .dstep:first-child { padding-top: 0; }
 .dstep:last-child { border-bottom: none; }
-.dstep-icon {
-  width: 42px; height: 42px; flex-shrink: 0;
-  background: var(--navy); display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-}
+.dstep-icon { width: 42px; height: 42px; flex-shrink: 0; background: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .dstep h4 { font-family: var(--serif); font-size: 18px; font-weight: 900; color: var(--navy-dark); margin-bottom: 5px; }
 .dstep p { font-size: 13px; color: var(--gray); line-height: 1.75; }
-.funding-box { background: var(--navy); padding: 44px 40px; border-top: 4px solid var(--gold); }
-.funding-box h3 { font-family: var(--serif); font-size: 22px; font-weight: 900; color: var(--gold-light); margin-bottom: 24px; }
-.funding-row {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
-  font-size: 14px;
-}
-.funding-row:last-child { border-bottom: none; }
-.funding-row .flabel { color: rgba(255,255,255,0.5); }
-.funding-row .fval { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--white); }
-.funding-note { margin-top: 20px; font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.7; font-style: italic; }
-
-/* TIMELINE */
-.timeline-section { background: var(--white); }
-.tl-track { display: flex; gap: 0; margin-top: 52px; position: relative; overflow: hidden; }
-.tl-track::before {
-  content: ''; position: absolute; top: 30px; left: 0; right: 0;
-  height: 2px; background: var(--navy-light); z-index: 0;
-}
-.tl-step { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; padding: 0 8px; }
-.tl-dot {
-  width: 18px; height: 18px; background: var(--navy);
-  border-radius: 50%; border: 3px solid var(--white);
-  box-shadow: 0 0 0 2px var(--navy); margin-bottom: 16px; flex-shrink: 0;
-}
-.tl-dot.gold { background: var(--gold); box-shadow: 0 0 0 2px var(--gold); }
-.tl-month { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-.tl-event { font-family: var(--serif); font-size: 15px; font-weight: 900; color: var(--navy-dark); line-height: 1.2; margin-bottom: 4px; }
-.tl-detail { font-size: 11px; color: var(--gray); line-height: 1.5; }
-
-/* CLOSEOUT */
-.closeout { background: var(--navy-pale); }
-.closeout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 52px; }
-.closeout-intro { font-size: 16px; font-weight: 300; color: var(--gray); line-height: 1.9; margin-bottom: 24px; }
-.closeout-steps { display: flex; flex-direction: column; gap: 16px; }
-.co-step {
-  display: flex; gap: 16px; padding: 20px; background: var(--white);
-  border-left: 3px solid var(--navy);
-}
-.co-step-num {
-  font-family: var(--serif); font-size: 22px; font-weight: 900;
-  color: var(--navy-light); flex-shrink: 0; line-height: 1;
-}
-.co-step h4 { font-family: var(--serif); font-size: 16px; font-weight: 900; color: var(--navy-dark); margin-bottom: 4px; }
-.co-step p { font-size: 13px; color: var(--gray); line-height: 1.7; }
-.closeout-outcomes { display: flex; flex-direction: column; gap: 16px; }
-.co-outcome {
-  padding: 24px 20px; border-left: 4px solid;
-}
-.co-outcome.renew { background: #F0FAF4; border-color: #2E9955; }
-.co-outcome.alumni { background: var(--navy-pale); border-color: var(--navy); }
-.co-outcome.exit { background: #F8F8F8; border-color: #AAAAAA; }
-.co-outcome h4 { font-family: var(--serif); font-size: 18px; font-weight: 900; margin-bottom: 6px; }
-.co-outcome.renew h4 { color: #1A6640; }
-.co-outcome.alumni h4 { color: var(--navy-dark); }
-.co-outcome.exit h4 { color: #555; }
-.co-outcome p { font-size: 13px; color: var(--gray); line-height: 1.7; }
 
 /* VISION */
 .vision { background: var(--navy-dark); padding: 96px 6vw; }
@@ -512,11 +295,7 @@ section { padding: 96px 6vw; }
 .vision .sec-tag::after { background: var(--gold-light); }
 .vision .sec-title { color: var(--white); }
 .vision-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 52px; }
-.vision-card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-  border-top: 3px solid var(--gold); padding: 36px 28px;
-  transition: background 0.2s;
-}
+.vision-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-top: 3px solid var(--gold); padding: 36px 28px; transition: background 0.2s; }
 .vision-card:hover { background: rgba(255,255,255,0.09); }
 .vision-card h3 { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--gold-light); margin-bottom: 12px; line-height: 1.2; }
 .vision-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; }
@@ -532,11 +311,7 @@ section { padding: 96px 6vw; }
 .apply-section { background: var(--white); }
 .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 56px; }
 .apply-step { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 30px; }
-.apply-step-num {
-  width: 40px; height: 40px; flex-shrink: 0; background: var(--navy);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--serif); font-size: 18px; font-weight: 900; color: var(--white);
-}
+.apply-step-num { width: 40px; height: 40px; flex-shrink: 0; background: var(--navy); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 18px; font-weight: 900; color: var(--white); }
 .apply-step h4 { font-family: var(--serif); font-size: 18px; font-weight: 900; color: var(--navy-dark); margin-bottom: 5px; }
 .apply-step p { font-size: 14px; color: var(--gray); line-height: 1.7; }
 .apply-form-box { background: var(--navy-pale); padding: 48px 40px; border-top: 4px solid var(--gold); }
@@ -544,24 +319,14 @@ section { padding: 96px 6vw; }
 .apply-form-box > p { font-size: 14px; color: var(--gray); margin-bottom: 28px; line-height: 1.7; }
 .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 16px; }
 .form-group label { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray); }
-.form-group input, .form-group select, .form-group textarea {
-  background: var(--white); border: 1.5px solid rgba(26,60,94,0.2);
-  padding: 11px 14px; font-family: var(--sans); font-size: 14px;
-  color: var(--ink); outline: none; transition: border-color 0.2s;
-}
+.form-group input, .form-group select, .form-group textarea { background: var(--white); border: 1.5px solid rgba(26,60,94,0.2); padding: 11px 14px; font-family: var(--sans); font-size: 14px; color: var(--ink); outline: none; transition: border-color 0.2s; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--navy); }
 .form-group textarea { resize: vertical; min-height: 88px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.deadline-note {
-  background: var(--white); border-left: 3px solid var(--gold);
-  padding: 14px 16px; margin: 16px 0; font-size: 13px; color: var(--gray); line-height: 1.6;
-}
+.deadline-note { background: var(--white); border-left: 3px solid var(--gold); padding: 14px 16px; margin: 16px 0; font-size: 13px; color: var(--gray); line-height: 1.6; }
 .deadline-note strong { color: var(--navy); }
 .docs-list { list-style: none; margin-top: 4px; }
-.docs-list li {
-  font-size: 13px; color: var(--gray); padding: 5px 0;
-  display: flex; gap: 8px; align-items: flex-start;
-}
+.docs-list li { font-size: 13px; color: var(--gray); padding: 5px 0; display: flex; gap: 8px; align-items: flex-start; }
 .docs-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
 
 /* CONTACT */
@@ -578,12 +343,15 @@ section { padding: 96px 6vw; }
 .cdetail-info a:hover { color: var(--gold-light); }
 .contact-note { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.85; margin-top: 10px; }
 .contact-form { display: flex; flex-direction: column; gap: 14px; }
-.contact-form .form-group input, .contact-form .form-group select, .contact-form .form-group textarea {
+.contact-form .form-group input,
+.contact-form .form-group textarea {
   background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.14); color: var(--white);
 }
-.contact-form .form-group input::placeholder, .contact-form .form-group textarea::placeholder { color: rgba(255,255,255,0.28); }
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder { color: rgba(255,255,255,0.28); }
 .contact-form .form-group label { color: rgba(255,255,255,0.38); }
-.contact-form .form-group input:focus, .contact-form .form-group textarea:focus { border-color: var(--gold); }
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus { border-color: var(--gold); outline: none; }
 
 /* FOOTER */
 footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
@@ -604,7 +372,7 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
   .hero-container { grid-template-columns: 1fr; text-align: center; gap: 48px; }
   .hero-content { align-items: center; }
   .hero-img-file { max-width: 420px; }
-  .about-grid, .elig-grid, .disburse-grid, .closeout-grid, .contact-inner, .apply-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-grid, .elig-grid, .disburse-grid, .contact-inner, .apply-grid { grid-template-columns: 1fr; gap: 40px; }
   .fund-grid, .select-grid, .values-grid { grid-template-columns: 1fr; }
   .vision-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; gap: 28px; }
@@ -637,7 +405,6 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-dots"></div>
-  
   <div class="hero-container">
     <div class="hero-content">
       <div class="hero-tag">Sahaay Scholarship Program · Academic Year 2026–27</div>
@@ -648,17 +415,14 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
       </h1>
       <p class="hero-sub">Sahaay — meaning <em>help and support</em> in Sanskrit — funds deserving students across India directly through their institutions. Because a child's future should never be decided by their family's income.</p>
       <div class="hero-cta">
-        <a href="#apply" class="btn-primary">Apply for 2026–27</a>
+        <a href="application.html" class="btn-primary">Apply for 2026–27</a>
         <a href="#about" class="btn-outline">Learn About Sahaay</a>
       </div>
     </div>
-    
     <div class="hero-graphic">
-      <!-- Verbatim asset placement for Sahaay.jpg with robust layout wrapper -->
       <img class="hero-img-file" src="Sahaay.jpg" onerror="this.onerror=null; this.src='Sahaay.png';" alt="Sahaay Scholarship Initiative Graphic">
     </div>
   </div>
-  
   <div class="hero-scroll">Scroll to explore</div>
 </section>
 
@@ -670,7 +434,7 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
       <h2>Scholarships Available for<br>Academic Year 2026–2027</h2>
       <p class="ann-deadline">Deadline: <strong>June 30, 2026</strong> &nbsp;·&nbsp; Up to <strong>8 students</strong> funded across 4 categories</p>
     </div>
-    <a href="#apply" class="btn-primary">Apply for Scholarship →</a>
+    <a href="application.html" class="btn-primary">Apply for Scholarship →</a>
   </div>
 </div>
 
@@ -785,116 +549,59 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
   </div>
 </section>
 
-<!-- PROGRAMME PROCESS FLOW SECTION -->
+<!-- PROGRAMME PROCESS FLOW -->
 <section class="process" id="process">
   <div class="inner">
     <div class="sec-tag">How It Works</div>
-    <h2 class="sec-title" style="color: var(--white); margin-bottom: 8px;">Programme at a Glance</h2>
+    <h2 class="sec-title" style="color:var(--white); margin-bottom:8px;">Programme at a Glance</h2>
     <p class="sec-body">The diagram below outlines the end-to-end journey — from the first application to the year-end closeout and renewal decision.</p>
-    
     <div class="glance-container">
-      <!-- Step 1: Application -->
       <div class="glance-step">
         <div class="glance-box">
-          <div class="glance-info">
-            <div class="glance-label">Application</div>
-            <div class="glance-desc">Applications received</div>
-          </div>
+          <div class="glance-info"><div class="glance-label">Application</div><div class="glance-desc">Applications received</div></div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
-
-      <!-- Step 2: Review -->
       <div class="glance-step">
         <div class="glance-box">
-          <div class="glance-info">
-            <div class="glance-label">Review</div>
-            <div class="glance-desc">Screening · story review · shortlisting</div>
-          </div>
+          <div class="glance-info"><div class="glance-label">Review</div><div class="glance-desc">Screening · story review · shortlisting</div></div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
-
-      <!-- Step 3: Selection -->
       <div class="glance-step">
         <div class="glance-box">
-          <div class="glance-info">
-            <div class="glance-label">Selection</div>
-            <div class="glance-desc">Follow-up conversation · final decision</div>
-          </div>
+          <div class="glance-info"><div class="glance-label">Selection</div><div class="glance-desc">Follow-up conversation · final decision</div></div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
-
-      <!-- Step 4: Disbursement -->
       <div class="glance-step">
         <div class="glance-box">
-          <div class="glance-info">
-            <div class="glance-label">Disbursement</div>
-            <div class="glance-desc">Institution verification · fee payment</div>
-          </div>
+          <div class="glance-info"><div class="glance-label">Disbursement</div><div class="glance-desc">Institution verification · fee payment</div></div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
-
-      <!-- Step 5: Academic Year -->
       <div class="glance-step">
         <div class="glance-box">
-          <div class="glance-info">
-            <div class="glance-label">Academic Year</div>
-            <div class="glance-desc">Mid-year check-in</div>
-          </div>
+          <div class="glance-info"><div class="glance-label">Academic Year</div><div class="glance-desc">Mid-year check-in</div></div>
         </div>
         <div class="glance-arrow">↓</div>
       </div>
-
-      <!-- Step 6: Closeout -->
-      <div class="glance-step" style="margin-bottom: 12px;">
+      <div class="glance-step" style="margin-bottom:12px;">
         <div class="glance-box">
-          <div class="glance-info">
-            <div class="glance-label">Closeout</div>
-            <div class="glance-desc">Check-in · result confirmation · renewal review</div>
-          </div>
+          <div class="glance-info"><div class="glance-label">Closeout</div><div class="glance-desc">Check-in · result confirmation · renewal review</div></div>
         </div>
-        <div class="glance-arrow" style="margin: 16px 0 4px 0;">↓</div>
+        <div class="glance-arrow" style="margin:16px 0 4px 0;">↓</div>
       </div>
-      
-      <!-- Outlining the branching outcomes visually -->
       <div class="outcomes-branch">
-        <!-- Outcome RENEW -->
-        <div class="outcome-card renew">
-          <div class="outcome-title">Renew</div>
-          <div class="outcome-desc">Continues next year</div>
-        </div>
-
-        <!-- Outcome ALUMNI -->
-        <div class="outcome-card alumni">
-          <div class="outcome-title">Alumni</div>
-          <div class="outcome-desc">Completed programme</div>
-        </div>
-
-        <!-- Outcome EXIT -->
-        <div class="outcome-card exit">
-          <div class="outcome-title">Exit</div>
-          <div class="outcome-desc">Graceful closure</div>
-        </div>
+        <div class="outcome-card renew"><div class="outcome-title">Renew</div><div class="outcome-desc">Continues next year</div></div>
+        <div class="outcome-card alumni"><div class="outcome-title">Alumni</div><div class="outcome-desc">Completed programme</div></div>
+        <div class="outcome-card exit"><div class="outcome-title">Exit</div><div class="outcome-desc">Graceful closure</div></div>
       </div>
     </div>
-
-    <!-- Color-coded legend mapping perfectly to description -->
     <div class="glance-legend">
-      <div class="legend-item">
-        <span class="legend-bullet renew">■</span>
-        <span><strong>Renew</strong> — continues to next year's disbursement</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-bullet alumni">■</span>
-        <span><strong>Alumni</strong> — joins Sahaay network</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-bullet exit">■</span>
-        <span><strong>Exit</strong> — graceful closure, slot reopens</span>
-      </div>
+      <div class="legend-item"><span class="legend-bullet renew">■</span><span><strong>Renew</strong> — continues to next year's disbursement</span></div>
+      <div class="legend-item"><span class="legend-bullet alumni">■</span><span><strong>Alumni</strong> — joins Sahaay network</span></div>
+      <div class="legend-item"><span class="legend-bullet exit">■</span><span><strong>Exit</strong> — graceful closure, slot reopens</span></div>
     </div>
   </div>
 </section>
@@ -1023,9 +730,7 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
   <div class="inner">
     <div class="sec-tag">Apply Now</div>
     <h2 class="sec-title">Take the Next Step</h2>
-    
     <div class="apply-grid">
-      <!-- Steps Column -->
       <div>
         <div class="apply-step">
           <div class="apply-step-num">1</div>
@@ -1054,34 +759,24 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
           </div>
         </div>
       </div>
-      
-      <!-- Styled Google Form Call-to-Action Card -->
-      <div class="apply-form-box" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 480px; padding: 44px 40px; border-top: 4px solid var(--gold); background: var(--navy-pale);">
+      <div class="apply-form-box" style="display:flex; flex-direction:column; justify-content:space-between; min-height:480px; padding:44px 40px; border-top:4px solid var(--gold); background:var(--navy-pale);">
         <div>
-          <h3 style="font-family: var(--serif); font-size: 28px; font-weight: 900; color: var(--navy-dark); margin-bottom: 8px;">Official Application</h3>
-          <p style="font-size: 14px; color: var(--gray); margin-bottom: 24px; line-height: 1.6;">Academic Year 2026–2027 Scholarship Drive</p>
-          
-          <div style="background: var(--white); border-left: 3px solid var(--gold); padding: 20px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(26,60,94,0.03);">
-            <h4 style="font-family: var(--serif); font-weight: 900; color: var(--navy-dark); margin-bottom: 8px; font-size: 16px;">External Submission</h4>
-            <p style="font-size: 13px; color: var(--gray); line-height: 1.7; margin-bottom: 12px;">We securely host our official registration process on Google Forms to gather transcripts, certificates, and reference files.</p>
-            <ul style="list-style: none; padding-left: 0;">
-              <li style="font-size: 12px; color: var(--gray); margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
-                <span style="color: var(--gold);">✦</span> Estimated completion: 15 minutes
-              </li>
-              <li style="font-size: 12px; color: var(--gray); display: flex; align-items: center; gap: 8px;">
-                <span style="color: var(--gold);">✦</span> Supports file attachments up to 10MB
-              </li>
+          <h3 style="font-family:var(--serif); font-size:28px; font-weight:900; color:var(--navy-dark); margin-bottom:8px;">Official Application</h3>
+          <p style="font-size:14px; color:var(--gray); margin-bottom:24px; line-height:1.6;">Academic Year 2026–2027 Scholarship Drive</p>
+          <div style="background:var(--white); border-left:3px solid var(--gold); padding:20px; margin-bottom:24px; box-shadow:0 4px 12px rgba(26,60,94,0.03);">
+            <h4 style="font-family:var(--serif); font-weight:900; color:var(--navy-dark); margin-bottom:8px; font-size:16px;">External Submission</h4>
+            <p style="font-size:13px; color:var(--gray); line-height:1.7; margin-bottom:12px;">We securely host our official registration process on Google Forms to gather transcripts, certificates, and reference files.</p>
+            <ul style="list-style:none; padding-left:0;">
+              <li style="font-size:12px; color:var(--gray); margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span style="color:var(--gold);">✦</span> Estimated completion: 15 minutes</li>
+              <li style="font-size:12px; color:var(--gray); display:flex; align-items:center; gap:8px;"><span style="color:var(--gold);">✦</span> Supports file attachments up to 10MB</li>
             </ul>
           </div>
         </div>
-
         <div>
-          <div class="deadline-note" style="background: var(--white); border-left: 3px solid var(--navy); padding: 14px 16px; margin-bottom: 24px; font-size: 13px; color: var(--gray); line-height: 1.6;">
+          <div class="deadline-note" style="background:var(--white); border-left:3px solid var(--navy); padding:14px 16px; margin-bottom:24px; font-size:13px; color:var(--gray); line-height:1.6;">
             Application Deadline: <strong>June 30, 2026</strong>.
           </div>
-          
-          <!-- Google Forms Target URL -->
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJOwd_JJqT9SGIeLReBdiXPG7hfHni1cvhpdSEyNJxkVZ1Bw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; width: 100%; text-align: center;">
+          <a href="application.html" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; width:100%; text-align:center;">
             Open Application Form
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
@@ -1097,6 +792,8 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
     <div class="sec-tag">Contact Us</div>
     <h2 class="sec-title">Get in Touch</h2>
     <div class="contact-inner">
+
+      <!-- Left: Contact Details -->
       <div class="contact-details">
         <div class="cdetail">
           <div class="cdetail-icon">✉️</div>
@@ -1121,45 +818,47 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
         </div>
         <p class="contact-note">For grievance issues, donor partnerships, or institutional collaborations, please write to us directly. We will try our best to respond within 48 business hours.</p>
       </div>
-      
-      <!-- DEVELOPMENT NOTE: 
-           This form is linked to your Google Form (https://forms.gle/pP1F1actTmu7bgGr7)
-           using the dynamic Hidden-Iframe submission pattern. 
-           Please replace standard entry names (e.g. entry.1111111111) with the exact 
-           IDs from your Google Form (found by inspecting elements in your browser).
-      -->
+
+      <!-- Right: Contact Form → Google Sheets via doPost -->
       <div class="contact-form">
-        <!-- We target a hidden iframe so the page doesn't refresh/leave when submitted -->
-        <form 
-          action="https://docs.google.com/forms/d/e/1FAIpQLScm9fXU0D3bT-G2e7zMv5DfeO-eE_Qf89N1y181rL-D3e3OBA/formResponse" 
-          method="POST" 
-          target="hidden_iframe" 
-          onsubmit="handleGoogleFormSubmit();"
-        >
-          <div class="form-group">
-            <label>Your Name</label>
-            <!-- Update the 'name' parameter with your inspected Google Form Name input element key -->
-            <input type="text" name="entry.1111111111" placeholder="Full Name" required>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <!-- Update the 'name' parameter with your inspected Google Form Email input element key -->
-            <input type="email" name="entry.2222222222" placeholder="name@domain.com" required>
-          </div>
-          <div class="form-group">
-            <label>Your Message</label>
-            <!-- Update the 'name' parameter with your inspected Google Form Message textarea element key -->
-            <textarea name="entry.3333333333" placeholder="Write your queries or requests here..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="background:var(--gold); color:var(--navy-dark); border:none; margin-top:10px;">Send Message</button>
-          
-          <div id="contactSuccess" style="display:none; margin-top:15px; padding:12px; background:rgba(255,255,255,0.1); border-left:3px solid var(--gold-light); color:#fff; font-size:13px;">
-            Message sent! We have securely recorded your message in our system. We will get back to you shortly.
-          </div>
-        </form>
-        <!-- The hidden iframe -->
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="cf-name" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" id="cf-phone" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="cf-email" placeholder="name@domain.com" required>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea id="cf-message" placeholder="Write your queries or requests here..." required></textarea>
+        </div>
+
+        <button type="button" id="cf-submit" onclick="submitToSheet()"
+          class="btn-primary"
+          style="background:var(--gold); color:var(--navy-dark); border:none; margin-top:6px; cursor:pointer; width:100%;">
+          Send Message
+        </button>
+
+        <!-- Success -->
+        <div id="cf-success" style="display:none; margin-top:14px; padding:12px 16px;
+          background:rgba(255,255,255,0.08); border-left:3px solid var(--gold-light);
+          color:#fff; font-size:13px; line-height:1.6;">
+          ✅ Message sent successfully! We have recorded your enquiry and will respond within 48 business hours.
+        </div>
+
+        <!-- Error -->
+        <div id="cf-error" style="display:none; margin-top:14px; padding:12px 16px;
+          background:rgba(220,50,50,0.12); border-left:3px solid #ff6b6b;
+          color:#ffcccc; font-size:13px; line-height:1.6;">
+          ❌ Something went wrong. Please try again or email us directly at support@sahaayprogram.org
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -1193,16 +892,48 @@ footer { background: var(--navy-dark); padding: 52px 6vw 24px; }
 </footer>
 
 <script>
-  let submitted = false;
-  function handleGoogleFormSubmit() {
-    // Show success message inside client-side cleanly
-    document.getElementById('contactSuccess').style.display = 'block';
-    
-    // Optional: Reset form fields after small delay
-    setTimeout(() => {
-      const inputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
-      inputs.forEach(el => el.value = '');
-    }, 1200);
+  const WEBAPP_URL = "https://script.google.com/macros/s/AKfycby4SXNpaXYkD7rULwLdWFLNCljgQ4IzETWUJ7omonwayewDa897imQ93EKNm-k6e1r-/exec";
+
+  function submitToSheet() {
+    const name    = document.getElementById('cf-name').value.trim();
+    const phone   = document.getElementById('cf-phone').value.trim();
+    const email   = document.getElementById('cf-email').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+
+    // Validation
+    if (!name || !phone || !email || !message) {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
+
+    const btn = document.getElementById('cf-submit');
+    btn.textContent = "Sending…";
+    btn.disabled = true;
+    document.getElementById('cf-success').style.display = 'none';
+    document.getElementById('cf-error').style.display   = 'none';
+
+    // Send as JSON POST — matches your existing doPost(e) exactly
+    fetch(WEBAPP_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, phone, email, message }),
+      mode: "no-cors"   // Google Apps Script requires no-cors for cross-origin POST
+    })
+    .then(() => {
+      // no-cors = opaque response; if fetch didn't throw, treat as success
+      document.getElementById('cf-success').style.display = 'block';
+      document.getElementById('cf-name').value    = '';
+      document.getElementById('cf-phone').value   = '';
+      document.getElementById('cf-email').value   = '';
+      document.getElementById('cf-message').value = '';
+    })
+    .catch(() => {
+      document.getElementById('cf-error').style.display = 'block';
+    })
+    .finally(() => {
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+    });
   }
 </script>
 
